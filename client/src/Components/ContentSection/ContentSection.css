@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    font-family: IBM Plex Sans;
+}
+.ContentSection{
+    margin-top: 30px;
+}
+
+/*CS-Nav*/
+.CS-Nav .col-8,
+.col-4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.link{
+    position: relative;
+    text-align: left;
+    margin:10px 20px;
+    text-decoration: none;
+    color:#8A8A8A;
+    cursor: pointer;
+}
+.link.activelink{
+    z-index: 10;
+    color: black;
+    padding-bottom: 14px;
+    border-bottom: 2px solid black;
+}
+
+.nav:before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    width:1020px;
+    height: 2px;
+    bottom:68px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown .btn{
+    color: black;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    background-color:#EDEEF0;
+    border-radius: 4px;
+    padding:6px 16px;
+    margin-right: 15px;
+}
+.CS-Nav .col-4{
+    margin-bottom: 15px;
+}
+
+/*CS-posts*/
+.CS-posts .col-8{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Side bar*/
+.sideBar{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+/*side Search bar*/
+.sideBar-search{
+    width: 90%;
+}
+
+.sideBar .locationIcon{
+    width:21px;
+    position: relative;
+    top:32px;
+    left:-4px;
+}
+.sideBar-search form {
+    width: 100%;
+    padding: 8px;
+    padding-bottom: 14px;
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid #B8B8B8;
+}
+
+.sideBar-search input{
+    margin-left: 10px;
+    font-size: 14px;
+    border: none;
+    width: 90%;
+    height: 100%;
+    resize: none;
+    outline: 0px none transparent;
+}
+
+::placeholder {
+    color: #d1d0d0;
+}
+
+.sideBar-info{
+    padding: 10px 15px;
+    font-style: normal;
+    display: flex;
+    color:#707070;
+    flex-direction: row;
+}
+.sideBar-info p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 10px;
+}
+
+/*Side Bar Recd section*/
+.sideBar-recd-sec{
+    margin-top: 50px;
+    width: 95%;
+    height: auto;
+}
+.recd-profils{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.recd-profils-section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
