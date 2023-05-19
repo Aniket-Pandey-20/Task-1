@@ -35,7 +35,7 @@ function ContentSection() {
 
   return (
     <div className='ContentSection container'>
-        <div className="CS-Nav row">
+        <div className="CS-Nav row mob-hid">
             <div class="col-8">
                 <nav class="nav">
                     <a class={curTab === 1 ? 'link activelink' : 'link'} aria-current="page" onClick={() => setCurTab(1)}>All Posts(34)</a>
@@ -47,7 +47,7 @@ function ContentSection() {
             </div>
             <div class="col-4">
                 <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn dropdown-toggle" style={{fontSize:'14px'}} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Write a Post
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -57,6 +57,20 @@ function ContentSection() {
                 <button class="btn btn-primary btn-sm" type="submit"><GroupAddIcon style={{transform: 'scaleX(-1)',marginRight:'5px',padding:'2px'}}/>Join Group</button>
             </div>
         </div>
+        <div className="CS-Nav-Mob">
+            <p style={{fontSize:'16px',fontWeight:'700',marginBottom:'0'}}>Posts(364)</p>
+            <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filter
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Articles</a></li>
+                        <li><a class="dropdown-item" href="#">Events</a></li>
+                        <li><a class="dropdown-item" href="#">Education</a></li>
+                        <li><a class="dropdown-item" href="#">Jobs</a></li>
+                    </ul>
+                </div>
+        </div>
 
         <div className='CS-posts row'>
             <div className="col-8">
@@ -65,7 +79,7 @@ function ContentSection() {
                 <Post type={'event'} headContent={"Finance & Investment Elite Social Mixer @Lujiazui"} profil={profilPhoto} name={"Alex Parker"}/>
                 <Post type={'job'} headContent={"Software Developer vacancy. MERN Stack required"} profil={profilPhoto2} name={"John Carter"}/>
             </div>
-            <div className="col-4 sideBar">
+            <div className="col-4 sideBar mob-hid">
                 <div className="sideBar-search">
                     <LocationOnOutlinedIcon className='locationIcon'/>
                     <form onSubmit={handelSubmit}>
@@ -87,8 +101,8 @@ function ContentSection() {
                             <div className="head-name">Alex Parker</div>
                         </div>
                         <div className="recd-profils-section">
-                            <button type="button" class="btn btn-light btn-sm" style={{borderRadius:'20px',fontSize:'12px',background:'#EDEEF0'}}>Connect</button> 
-                            {/* <button type="button" class="btn btn-dark btn-sm" style={{borderRadius:'20px',fontSize:'12px'}}>Connected</button> */}
+                            {/* <button type="button" class="btn btn-light btn-sm" style={{borderRadius:'20px',fontSize:'12px',background:'#EDEEF0'}}>Connect</button>  */}
+                            <button type="button" class="btn btn-dark btn-sm" style={{borderRadius:'20px',fontSize:'12px'}}>Connected</button>
                         </div>
                     </div>
 
@@ -100,8 +114,8 @@ function ContentSection() {
                             <div className="head-name">Activism</div>
                         </div>
                         <div className="recd-profils-section">
-                            {/* <button type="button" class="btn btn-light btn-sm" style={{borderRadius:'20px',fontSize:'12px',background:'#EDEEF0'}}>Connect</button>  */}
-                            <button type="button" class="btn btn-dark btn-sm" style={{borderRadius:'20px',fontSize:'12px'}}>Connected</button>
+                            <button type="button" class="btn btn-light btn-sm" style={{borderRadius:'20px',fontSize:'12px',background:'#EDEEF0'}}>Connect</button> 
+                            {/* <button type="button" class="btn btn-dark btn-sm" style={{borderRadius:'20px',fontSize:'12px'}}>Connected</button> */}
                         </div>
                     </div>
 

@@ -68,7 +68,7 @@ function Post({type,headContent,profil,name}) {
             </div>
             <div className="post-header-sec">
                 <div className="head-sub-dis">
-                    <VisibilityOutlinedIcon style={{width:'15px'}}/> 
+                    <VisibilityOutlinedIcon style={{width:'15px',marginRight:'5px'}}/> 
                     1.4k views
                 </div>
                 <ShareIcon style={{marginLeft:'20px',cursor:'pointer'}}/>
